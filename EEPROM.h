@@ -10,35 +10,30 @@
 #include "spi.h"
 #include "application.h"
 
-typedef enum
-{
-  OFF= 0U,
-  ON
-
+typedef enum{
+  	OFF= 0U,
+  	ON
 }PinState;
 
 typedef struct ChipSelect_portpin{
 
 	GPIO_TypeDef	 *GPIOx;
 
-	uint16_t		  GPIO_PIN;
-
+	uint16_t	  GPIO_PIN;
 }CS;
 
 typedef struct WriteProtect_portpin{
 
 	GPIO_TypeDef	 *GPIOx;
 
-	uint16_t		  GPIO_PIN;
-
+	uint16_t	 GPIO_PIN;
 }WP;
 
 typedef struct command{
 
 	uint8_t	 		    Read;
 
-	uint8_t		  		Write;
-
+	uint8_t  	            Write;
 }CMD;
 
 typedef struct eeprom{
@@ -50,17 +45,15 @@ typedef struct eeprom{
 
 	uint32_t		     Adress;
 
-		  CS            *PinName;
+	CS		            *PinName;
 
-		  WP 		    *PinName_WP;
+	WP	 		    *PinName_WP;
 
-		  CMD		    *Command;
-
-
+	CMD			    *Command;
 }EEPROM;
 
-void CS_Moment_Set 		( PinState gpio, EEPROM *EeproM  );
-void WP_Moment_Set 		( PinState gpio, EEPROM *EeproM  );
+void CS_Moment_Set 	( PinState gpio, EEPROM *EeproM  );
+void WP_Moment_Set 	( PinState gpio, EEPROM *EeproM  );
 
 PinState CS_Moment_Get  ( EEPROM *EeproM  );
 PinState WP_Moment_Get  ( EEPROM *EeproM  );
