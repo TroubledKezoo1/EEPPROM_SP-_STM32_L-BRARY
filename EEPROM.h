@@ -26,7 +26,7 @@ typedef struct WriteProtect_portpin{
 
 	GPIO_TypeDef	 *GPIOx;
 
-	uint16_t	 GPIO_PIN;
+	uint16_t	  GPIO_PIN;
 }WP;
 
 typedef struct command{
@@ -39,7 +39,7 @@ typedef struct command{
 typedef struct eeprom{
 
 
-    SPI_HandleTypeDef   *hspi;
+    	SPI_HandleTypeDef   	    *hspi;
 
 	uint8_t 		     AdresByteType;
 
