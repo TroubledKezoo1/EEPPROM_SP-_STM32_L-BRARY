@@ -1,4 +1,4 @@
-{
+
 // EXAMPLE
 
 #include "main.h"
@@ -41,4 +41,3 @@ int main1(void){
 
 }
 
-}
