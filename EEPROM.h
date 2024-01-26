@@ -8,7 +8,6 @@
 #include "main.h"
 #include "gpio.h"
 #include "spi.h"
-#include "application.h"
 
 typedef enum{
   	OFF= 0U,
